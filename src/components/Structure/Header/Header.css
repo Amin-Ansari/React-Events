@@ -1,0 +1,21 @@
+.header-style {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.newsletter-form-container {
+  display: none;
+}
+
+@media all and (min-width: 768px) {
+  .header-style {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+  }
+  .newsletter-form-container {
+    display: block;
+  }
+}

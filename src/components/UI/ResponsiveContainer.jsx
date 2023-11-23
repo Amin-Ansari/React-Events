@@ -2,7 +2,7 @@
 import ContainerFluid from "./ContainerFluid";
 import Container from "./Container";
 
-const ResponsiveContainer = () => {
+const ResponsiveContainer = (props) => {
   const { children: containerInnerComponents } = props;
   return (
     <ContainerFluid>
@@ -10,3 +10,5 @@ const ResponsiveContainer = () => {
     </ContainerFluid>
   );
 };
+
+export default ResponsiveContainer;

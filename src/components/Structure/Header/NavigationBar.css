@@ -1,0 +1,53 @@
+.nav-links-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  width: 100%;
+  background-color: red;
+}
+.link-items {
+  overflow: hidden;
+  position: relative;
+  margin: 0rem 1.25rem;
+  padding: 1.5rem 0rem;
+}
+
+.link-items > a {
+  color: inherit;
+  font-size: calc(0.9rem + 0.2vw);
+}
+
+.link-items .hover-effect {
+  display: block;
+  position: absolute;
+  transform: scalex(0);
+  background-color: #213547;
+  width: 100%;
+  height: 2px;
+  border-radius: 4rem;
+  transition: transform 0.4s ease;
+  transform-origin: bottom right;
+}
+
+.link-items:hover .hover-effect {
+  transform: scalex(1);
+  transform-origin: bottom left;
+}
+
+.active-link > .hover-effect {
+  transform: scalex(1);
+  transform-origin: bottom left;
+}
+
+@media all and (min-width: 768px) {
+  .link-items > a {
+    color: inherit;
+    font-size: 1.1rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .link-items .hover-effect {
+    background-color: #ffffffde;
+  }
+}

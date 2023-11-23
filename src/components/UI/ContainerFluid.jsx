@@ -1,4 +1,4 @@
-import "./ContainerFluid.css";
+import "./ContailerFluid.css";
 
 const ContainerFluid = (props) => {
   const { children } = props;

@@ -1,0 +1,22 @@
+//Components
+import ResponsiveContainer from "../../UI/ResponsiveContainer";
+import NavigationBar from "./NavigationBar";
+
+//The css files and other assets
+import "./Header.css";
+import NewsLetterForm from "../Forms/NewsLetterForm";
+
+const Header = () => {
+  return (
+    <ResponsiveContainer>
+      <header className="header-style">
+        <NavigationBar />
+        <div className="newsletter-form-container">
+          <NewsLetterForm />
+        </div>
+      </header>
+    </ResponsiveContainer>
+  );
+};
+
+export default Header;
