@@ -21,9 +21,28 @@
   margin: 1rem 0rem;
 }
 
+.detail-footer-link-list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.detail-footer-link-item {
+  margin: 0rem 1rem;
+  font-size: 1.1rem;
+}
+.new-link {
+  color: #ce5a67;
+}
+
 @media all and (max-width: 768px) {
   .event-detial-title {
     font-size: calc(2rem + 0.2vw);
     margin: 1.4rem 0rem;
+  }
+  .event-detail-description {
+    font-size: 1.1rem;
+  }
+  .detail-footer-link-item {
+    font-size: 1rem;
   }
 }

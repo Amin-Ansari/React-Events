@@ -43,7 +43,7 @@ const routes = createBrowserRouter([
                 loader: eventDetailLoader
               },
               {
-                path: ":eventId/edit",
+                path: "edit",
                 element: <EventEditPage />
               }
             ]
