@@ -11,6 +11,9 @@ import AllEventsPage from "./Pages/AllEventsPage";
 //React-Router Essentioals and packages
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+//Loader and Action functions
+import { eventsLoader } from "./Pages/EventsPage";
+
 const routes = createBrowserRouter([
   {
     path: "/",
@@ -23,6 +26,8 @@ const routes = createBrowserRouter([
       {
         path: "/events",
         element: <EventsPage />,
+        id: "all-events",
+        loader: eventsLoader,
         children: [
           {
             index: true,

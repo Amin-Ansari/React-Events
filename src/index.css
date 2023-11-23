@@ -36,19 +36,10 @@ button {
   outline: none;
 }
 
-.events-backdrop {
-  background-color: #fff;
-  box-shadow: #63636333 0px 1px 8px 0px;
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;
     color: rgba(255, 255, 255, 0.87);
     background-color: #020621;
-  }
-  .events-backdrop {
-    background: #1c1f38;
-    box-shadow: none;
   }
 }

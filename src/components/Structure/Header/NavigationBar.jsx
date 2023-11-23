@@ -28,7 +28,11 @@ const NavigationBar = () => {
           </NavLink>
         </li>
         <li className="link-items">
-          <NavLink to={"newsletter"} end>
+          <NavLink
+            to={"newsletter"}
+            className={({ isActive }) => (isActive ? "active-link" : undefined)}
+            end
+          >
             Newsletter
             <span className="hover-effect"></span>
           </NavLink>
