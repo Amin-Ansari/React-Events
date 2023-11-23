@@ -28,10 +28,7 @@ const NavigationBar = () => {
           </NavLink>
         </li>
         <li className="link-items">
-          <NavLink
-            to={"newsletter"}
-            className={({ isActive }) => (isActive ? "active-link" : undefined)}
-          >
+          <NavLink to={"newsletter"} end>
             Newsletter
             <span className="hover-effect"></span>
           </NavLink>

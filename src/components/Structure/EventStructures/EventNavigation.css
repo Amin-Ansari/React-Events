@@ -1,0 +1,25 @@
+.event-nav-container {
+  width: 100%;
+}
+.events-nav-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.events-nav-list a {
+  display: inline-block;
+  margin: 0rem 1rem;
+  padding: 0.7rem 1rem;
+  background-color: #e0bcc0;
+  color: #ce5a67;
+  box-shadow: 0px 1px 8px 0px rgba(63, 63, 63, 0.205);
+  border-radius: 0.4rem;
+  font-size: 1.1rem;
+}
+
+a.activate-button {
+  background-color: #ce5a67;
+  color: #fff;
+}

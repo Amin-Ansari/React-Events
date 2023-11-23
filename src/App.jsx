@@ -6,6 +6,7 @@ import EventDetailPage from "./Pages/EventDetailsPage";
 import EventEditPage from "./Pages/EventEditPage";
 import NewsletterPage from "./Pages/NewsletterPage";
 import NewEventPage from "./Pages/NewEventPage";
+import AllEventsPage from "./Pages/AllEventsPage";
 
 //React-Router Essentioals and packages
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -17,34 +18,38 @@ const routes = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <HomePage />,
+        element: <HomePage />
       },
       {
         path: "/events",
         element: <EventsPage />,
         children: [
           {
+            index: true,
+            element: <AllEventsPage />
+          },
+          {
             path: ":eventId",
             children: [
               {
                 index: true,
-                element: <EventDetailPage />,
+                element: <EventDetailPage />
               },
               {
                 path: ":eventId/edit",
-                element: <EventEditPage />,
-              },
-            ],
+                element: <EventEditPage />
+              }
+            ]
           },
           {
-            path: "/events/new-event/new-event",
-            element: <NewEventPage />,
-          },
-        ],
+            path: "/events/new-event",
+            element: <NewEventPage />
+          }
+        ]
       },
-      { path: "/newsletter", element: <NewsletterPage /> },
-    ],
-  },
+      { path: "/newsletter", element: <NewsletterPage /> }
+    ]
+  }
 ]);
 
 function App() {
