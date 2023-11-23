@@ -3,13 +3,13 @@
   flex-flow: row wrap;
   justify-content: flex-start;
   width: 100%;
-  background-color: red;
 }
 .link-items {
   overflow: hidden;
   position: relative;
   margin: 0rem 1.25rem;
   padding: 1.5rem 0rem;
+  cursor: pointer;
 }
 
 .link-items > a {
@@ -21,7 +21,7 @@
   display: block;
   position: absolute;
   transform: scalex(0);
-  background-color: #213547;
+  background-color: #ce5a67;
   width: 100%;
   height: 2px;
   border-radius: 4rem;
@@ -43,11 +43,5 @@
   .link-items > a {
     color: inherit;
     font-size: 1.1rem;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .link-items .hover-effect {
-    background-color: #ffffffde;
   }
 }

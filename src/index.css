@@ -30,6 +30,12 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
+
+button {
+  border: none;
+  outline: none;
+}
+
 .events-backdrop {
   background-color: #fff;
   box-shadow: #63636333 0px 1px 8px 0px;
