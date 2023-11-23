@@ -1,0 +1,29 @@
+.event-detial-title,
+.event-detail-description,
+.event-detail-date {
+  text-align: center;
+}
+
+.event-detial-title {
+  margin: 5rem 0rem 3rem;
+}
+.event-detail-image {
+  width: min(100%, 850px);
+  margin: auto;
+  border-radius: 1rem;
+  box-shadow: 0px 2px 8px 0px #33333338;
+}
+.event-detail-description {
+  margin: 2rem 0rem 0rem;
+  font-size: 1.3rem;
+}
+.event-detail-date {
+  margin: 1rem 0rem;
+}
+
+@media all and (max-width: 768px) {
+  .event-detial-title {
+    font-size: calc(2rem + 0.2vw);
+    margin: 1.4rem 0rem;
+  }
+}

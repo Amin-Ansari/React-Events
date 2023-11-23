@@ -1,3 +1,6 @@
 .container {
   width: min(100%, 1320px);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
 }
