@@ -9,12 +9,12 @@ import "./EventEditPage.css";
 
 const EventEditPage = () => {
   const data = useRouteLoaderData("event-details");
+
   return (
     <>
       <h2 className="event-edit-tile">Edit the {data.event.title} Event</h2>
-      <EventForm method="PATCH" defValues={data.event} />
+      <EventForm formMethod="PATCH" defValues={data.event} />
     </>
   );
 };
-
 export default EventEditPage;

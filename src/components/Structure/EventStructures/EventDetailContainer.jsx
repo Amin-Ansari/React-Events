@@ -18,9 +18,9 @@ const EventDetailContainer = (porps) => {
           <Link to={"edit"}>Edit</Link>
         </li>
         <li className="detail-footer-link-item">
-          <Link to={"/events/new-event"} className="new-link">
-            New
-          </Link>
+          <button to={""} className="delete-button">
+            Delete
+          </button>
         </li>
       </ul>
     </>

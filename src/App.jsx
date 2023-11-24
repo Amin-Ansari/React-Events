@@ -14,6 +14,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 //Loader and Action functions
 import { eventsLoader } from "./Pages/EventsPage";
 import { eventDetailLoader } from "./Pages/EventDetailsPage";
+import { eventFormAction } from "./components/Structure/Forms/EventForm";
 
 const routes = createBrowserRouter([
   {
@@ -45,7 +46,8 @@ const routes = createBrowserRouter([
               },
               {
                 path: "edit",
-                element: <EventEditPage />
+                element: <EventEditPage />,
+                action: eventFormAction
               }
             ]
           },

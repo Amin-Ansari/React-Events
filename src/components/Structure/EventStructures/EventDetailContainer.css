@@ -30,8 +30,12 @@
   margin: 0rem 1rem;
   font-size: 1.1rem;
 }
-.new-link {
+.delete-button {
   color: #ce5a67;
+  background-color: transparent;
+  border: none;
+  font-size: inherit;
+  cursor: pointer;
 }
 
 @media all and (max-width: 768px) {
