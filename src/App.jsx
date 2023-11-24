@@ -55,7 +55,8 @@ const routes = createBrowserRouter([
           },
           {
             path: "/events/new-event",
-            element: <NewEventPage />
+            element: <NewEventPage />,
+            action: eventFormAction
           }
         ]
       },

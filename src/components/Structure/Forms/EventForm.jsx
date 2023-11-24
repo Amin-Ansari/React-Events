@@ -14,7 +14,7 @@ const EventForm = (props) => {
 
   console.log(formMethod);
   return (
-    <Form method={"PATCH"} className="event-form">
+    <Form method={formMethod} className="event-form">
       <label className="label-style" htmlFor="title-input">
         Title
       </label>
@@ -23,7 +23,7 @@ const EventForm = (props) => {
         id="title-input"
         name="title"
         className="input-style"
-        defaultValue={defValues.title ? defValues.title : ""}
+        defaultValue={defValues ? defValues.title : ""}
       ></input>
 
       <label className="label-style" htmlFor="image-input">
@@ -34,7 +34,7 @@ const EventForm = (props) => {
         id="image-input"
         name="image"
         className="input-style"
-        defaultValue={defValues.title ? defValues.image : ""}
+        defaultValue={defValues ? defValues.image : ""}
       ></input>
 
       <label className="label-style" htmlFor="image-input">
@@ -45,7 +45,7 @@ const EventForm = (props) => {
         id="image-input"
         name="date"
         className="input-style"
-        defaultValue={defValues.title ? defValues.date : ""}
+        defaultValue={defValues ? defValues.date : ""}
       ></input>
 
       <label className="label-style" htmlFor="description-text">
@@ -55,7 +55,7 @@ const EventForm = (props) => {
         id="description-text"
         name="description"
         className="description-text-area"
-        defaultValue={defValues.description ? defValues.description : ""}
+        defaultValue={defValues ? defValues.description : ""}
       ></textarea>
       <div className="buttons-container">
         <button
@@ -88,7 +88,11 @@ export const eventFormAction = async ({ request, params }) => {
     description: formData.get("description")
   };
 
-  const formRequest = await fetch("http://localhost:8080/events/" + Id, {
+  let url = "http://localhost:8080/events/";
+
+  if (method == "PATCH") url = url + Id;
+
+  const formRequest = await fetch(url, {
     method: method,
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(patchData)
