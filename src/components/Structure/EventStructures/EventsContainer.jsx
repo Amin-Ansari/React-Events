@@ -25,7 +25,6 @@ const renderTheEvents = (eventsArray) => {
 
 const EventsContainer = (props) => {
   const { fetchedEvents } = props;
-  console.log(fetchedEvents);
   return (
     <div className="events-container">
       <ul className="events-list">{renderTheEvents(fetchedEvents)}</ul>

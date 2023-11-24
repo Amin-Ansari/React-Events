@@ -1,0 +1,67 @@
+.event-form {
+  width: min(100%, 850px);
+  display: flex;
+  flex-flow: column nowrap;
+  margin: auto;
+}
+
+.label-style,
+.input-style,
+.escription-text-area {
+  width: 100%;
+}
+.input-style,
+textarea.description-text-area {
+  font-size: 1rem;
+  width: 100%;
+  border: 1.9px solid #818181;
+  border-radius: 0.3rem;
+  outline: none;
+  margin-top: 0.4rem;
+  padding: 0.8rem 0.5rem;
+}
+
+.label-style {
+  font-size: 1.1rem;
+}
+
+.input-style {
+  margin-bottom: 1rem;
+}
+textarea.description-text-area {
+  height: 200px;
+}
+
+.buttons-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
+.event-form-button {
+  width: min-content;
+  padding: 0.8rem 1.25rem;
+  font-size: 1.1rem;
+  border-radius: 0.4rem;
+  margin: 1.25rem 0.8rem;
+  transition: all 0.3s;
+}
+.submit-button {
+  margin-right: 0rem;
+  background-color: #e0bcc0;
+}
+.submit-button:hover {
+  background-color: #ce5a67;
+}
+
+@media (prefers-color-scheme: dark) {
+  .submit-button {
+    color: #213547;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .cancel-button {
+    background-color: #d9d9da;
+  }
+}

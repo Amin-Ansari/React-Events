@@ -3,10 +3,10 @@ import ResponsiveContainer from "../components/UI/ResponsiveContainer";
 import EventDetailContainer from "../components/Structure/EventStructures/EventDetailContainer";
 
 //React-Router stuff
-import { json, useLoaderData } from "react-router-dom";
+import { json, useRouteLoaderData } from "react-router-dom";
 
 const EventDetailPage = () => {
-  const eventDetails = useLoaderData();
+  const eventDetails = useRouteLoaderData("event-details");
   return (
     <ResponsiveContainer>
       <EventDetailContainer eventDetail={eventDetails.event} />
