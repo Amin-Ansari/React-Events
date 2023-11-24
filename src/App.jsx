@@ -15,6 +15,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { eventsLoader } from "./Pages/EventsPage";
 import { eventDetailLoader } from "./Pages/EventDetailsPage";
 import { eventFormAction } from "./components/Structure/Forms/EventForm";
+import { deleteAction } from "./components/Structure/EventStructures/EventDetailContainer";
 
 const routes = createBrowserRouter([
   {
@@ -42,7 +43,8 @@ const routes = createBrowserRouter([
             children: [
               {
                 index: true,
-                element: <EventDetailPage />
+                element: <EventDetailPage />,
+                action: deleteAction
               },
               {
                 path: "edit",
