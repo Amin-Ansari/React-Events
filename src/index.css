@@ -36,6 +36,11 @@ button {
   outline: none;
 }
 
+.news-letter-title {
+  text-align: center;
+  margin: 3rem 0rem 3rem;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     color-scheme: dark;

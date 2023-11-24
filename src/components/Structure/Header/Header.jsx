@@ -12,7 +12,7 @@ const Header = () => {
       <header className="header-style">
         <NavigationBar />
         <div className="newsletter-form-container">
-          <NewsLetterForm />
+          <NewsLetterForm method={"method"} />
         </div>
       </header>
     </ResponsiveContainer>

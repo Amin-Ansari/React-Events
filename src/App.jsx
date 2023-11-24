@@ -16,6 +16,7 @@ import { eventsLoader } from "./Pages/EventsPage";
 import { eventDetailLoader } from "./Pages/EventDetailsPage";
 import { eventFormAction } from "./components/Structure/Forms/EventForm";
 import { deleteAction } from "./components/Structure/EventStructures/EventDetailContainer";
+import { newsletterAction } from "./Pages/NewsletterPage";
 
 const routes = createBrowserRouter([
   {
@@ -60,7 +61,11 @@ const routes = createBrowserRouter([
           }
         ]
       },
-      { path: "/newsletter", element: <NewsletterPage /> }
+      {
+        path: "newsletter",
+        element: <NewsletterPage />,
+        action: newsletterAction
+      }
     ]
   }
 ]);

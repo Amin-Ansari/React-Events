@@ -1,17 +1,19 @@
 //React-Router stuff
-import { useFetcher } from "react-router-dom";
+import { useFetcher, json } from "react-router-dom";
 
 //Css files and other assets
 import "./Newsletterform.css";
 
-export default function NewsLetterForm(props) {
-  const { formMethod } = props;
+const NewsLetterForm = (props) => {
+  const { method } = props;
   const fetcher = useFetcher();
+
+  console.log(fetcher.data);
 
   return (
     <fetcher.Form
-      action="newsletter"
-      method={formMethod}
+      action="/newsletter"
+      method={method}
       className="newsletter-form"
       style={{ overflow: "hidden" }}
     >
@@ -21,7 +23,11 @@ export default function NewsLetterForm(props) {
         placeholder="Sign up for newsletter"
         className="email-input"
       />
-      <button className="sign-up-button">Sign up</button>
+      <button type="submit" className="sign-up-button">
+        Sign up
+      </button>
     </fetcher.Form>
   );
-}
+};
+
+export default NewsLetterForm;
