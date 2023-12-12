@@ -1,0 +1,10 @@
+.home-page-welcome-title {
+  margin: 5rem 0rem 2rem;
+}
+.home-page-p {
+  text-align: center;
+  font-size: 1.1rem;
+}
+.home-page-p > span {
+  color: #ce5a67;
+}
