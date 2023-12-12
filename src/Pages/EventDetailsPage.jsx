@@ -7,6 +7,7 @@ import { json, useRouteLoaderData } from "react-router-dom";
 
 const EventDetailPage = () => {
   const eventDetails = useRouteLoaderData("event-details");
+
   return (
     <ResponsiveContainer>
       <EventDetailContainer eventDetail={eventDetails.event} />

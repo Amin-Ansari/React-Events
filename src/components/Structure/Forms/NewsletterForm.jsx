@@ -8,8 +8,6 @@ const NewsLetterForm = (props) => {
   const { method } = props;
   const fetcher = useFetcher();
 
-  console.log(fetcher.data);
-
   return (
     <fetcher.Form
       action="/newsletter"
