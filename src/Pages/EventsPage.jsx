@@ -4,7 +4,7 @@ import ResponsiveContainer from "../components/UI/ResponsiveContainer";
 import EventNavigation from "../components/Structure/EventStructures/EventNavigation";
 
 //React-Router stuff
-import { Outlet, json } from "react-router";
+import { Outlet, json, defer } from "react-router";
 
 const EventsPage = () => {
   return (
@@ -19,11 +19,18 @@ const EventsPage = () => {
 
 export default EventsPage;
 
-export const eventsLoader = async () => {
+const defferedEventsLoader = async () => {
   const request = await fetch("http://localhost:8080/events/");
-  if (request.ok) return request;
+  if (request.ok) {
+    const events = await request.json();
+    return events;
+  }
   return json(
     { message: "Loading Events Failed!" },
     { status: request.status, statusText: request.statusText }
   );
+};
+
+export const eventsLoader = async () => {
+  return defer({ allEvents: defferedEventsLoader() });
 };
